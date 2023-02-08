@@ -47,6 +47,8 @@ services:
       context: backend
       dockerfile: Dockerfile
     container_name: backend-web-app-api-demo
+    volumes:
+      - ./backend/prisma/:/app/prisma
     env_file:
       - backend/.env
     depends_on:
